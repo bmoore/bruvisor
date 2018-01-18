@@ -1,0 +1,7 @@
+.shards
+lib
+*.sw[op]
+node_modules
+bower_components
+logs/*
+*.dat

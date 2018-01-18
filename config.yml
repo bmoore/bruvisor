@@ -1,0 +1,15 @@
+---
+BUS_DIR: "./test/"
+PIN_DIR: "./test/"
+
+LOGFILE: "./logs/bruvisor.log"
+API_LOGFILE: "./logs/api.log"
+
+HLT_SSR: "HLT_ssr.dat"
+HLT_SENSOR: "HLT_temp.dat"
+
+MASH_SSR: "Mash_ssr.dat"
+MASH_SENSOR: "Mash_temp.dat"
+
+KETTLE_SSR: "Kettle_ssr.dat"
+KETTLE_SENSOR: "Kettle_temp.dat"
