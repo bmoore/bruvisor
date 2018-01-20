@@ -1,31 +1,23 @@
-name: brew_controller
+name: bruvisor
 version: 0.1.0
 
 # authors:
-#   - name <email@example.com>
+#   - Brian Moore <moore.brian.d@gmail.com>
 
 # description: |
-#   Short description of brew_controller
-#
+#   Bruvisor is a controller software for brewery automation.
 #
 
-#dependencies:
-#  openssl:
-#    github: datanoise/openssl.cr
-#    branch: master
-#  pg:
-#    github: will/crystal-pg
-#    version: "~> 0.5"
-
-development_dependencies:
+dependencies:
   crt:
     github: maiha/crt.cr
   minitest:
     github: ysbaddaden/minitest.cr
   kemal:
     github: kemalcr/kemal
-
-#   webmock:
-#     github: manastech/webmock.cr
+  redis:
+    github: stefanwille/crystal-redis
+  db:
+    github: crystal-lang/crystal-db
 
 # license: MIT
