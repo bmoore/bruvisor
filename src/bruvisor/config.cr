@@ -5,11 +5,11 @@ module Bruvisor
     @@params = YAML.parse(File.read("./config.yml"))
 
     def self.get(param)
-      @@params[param].to_s
+      @@params[param.upcase].to_s
     end
 
     def self.set(param, value)
-      @@params[param] = value
+      @@params[param.upcase] = value
     end
   end
 end
