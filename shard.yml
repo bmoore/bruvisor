@@ -19,5 +19,7 @@ dependencies:
     github: stefanwille/crystal-redis
   db:
     github: crystal-lang/crystal-db
+  mysql:
+    github: crystal-lang/crystal-mysql
 
 # license: MIT

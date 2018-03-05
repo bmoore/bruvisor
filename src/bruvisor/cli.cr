@@ -32,8 +32,8 @@ module Bruvisor
           @status = "Invalid goal: #{goal}"
         end
       when "sensor"
-        sensor = args[1]
-        if ["HLT", "Mash", "Kettle"].includes? sensor
+        sensor = args[1].downcase
+        if ["hlt", "mash", "kettle"].includes? sensor
           @controller.set_ssr_sensor(sensor)
           @status = "SSR is following #{sensor}"
         else

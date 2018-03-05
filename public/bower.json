@@ -1,0 +1,24 @@
+{
+  "name": "brew.bmoo.re",
+  "authors": [
+    "Brian Moore <moore.brian.d@gmail.com>"
+  ],
+  "description": "brewery controlls",
+  "main": "",
+  "license": "MIT",
+  "homepage": "http://bmoo.re/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "riot": "^3.7.0",
+    "RiotControl": "riotcontrol#*",
+    "bootstrap": "^3.3.7",
+    "d3": "^4.10.2"
+  }
+}

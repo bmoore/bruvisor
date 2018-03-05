@@ -1,1 +1,42 @@
-Brüvisor
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Brew Conroll</title>
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/assets/static/vendor.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Hello, brewing!</h1>
+
+    <gauge title="HLT"></gauge>
+    <gauge title="Mash Tun"></gauge>
+    <gauge title="Kettle"></gauge>
+
+    <script src="/assets/static/vendor.js"></script>
+    <script src="/assets/static/tag.js"></script>
+    <script> riot.mount('*'); </script>
+    <script>
+      $(document).ready(function() {
+        // Open WebSocket connection
+        var ws = new WebSocket("ws://" + location.host + "/chat");
+        // Append each message
+        ws.onmessage = function(e) { $('#chat').append(e.data + "\n") };
+        $("form").bind('submit', function(e) {
+          var message = $('#msg').val();
+          ws.send(message);
+          $('#msg').val(''); $('#msg').focus();
+          e.preventDefault();
+        });
+        window.onbeforeunload = function() {
+          websocket.onclose = function () {}; // disable onclose handler first
+          websocket.close()
+        };
+      });
+    </script>
+  </body>
+</html>
